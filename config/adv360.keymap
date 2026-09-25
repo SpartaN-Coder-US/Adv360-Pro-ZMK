@@ -42,13 +42,13 @@
         &trans &trans &trans &trans &trans &trans &trans       &trans &trans &mkp LCLK &mmv MOVE_UP &mkp RCLK &mkp MCLK &trans
         &tog 1 &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans   &trans &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans
         &trans &trans &trans &trans &trans &trans   &trans &trans   &msc SCRL_UP &msc SCRL_DOWN &trans &trans &trans &trans
-        &sl 2 &trans &trans &trans &trans   &trans &trans &trans &trans &mkp RCLK &mkp LCLK   &trans &trans &trans &trans &sl 2
+        &sl 2 &trans &trans &trans &trans   &mkp LCLK &mkp RCLK &trans &trans &mkp RCLK &mkp LCLK   &trans &trans &trans &trans &sl 2
       >;
     };
     fn {
       display-name = "Fn";
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1       &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 4       &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
         &trans &trans &trans &trans &trans &trans &macro_parens       &macro_dquotes &trans &kp HOME &kp UP &kp END &trans &trans
         &trans &trans &trans &trans &trans &trans &macro_braces   &trans &trans &trans &trans   &macro_quotes &kp LA(LEFT) &kp LEFT &kp DOWN &kp RIGHT &kp LA(RIGHT) &trans
         &trans &trans &trans &trans &trans &trans   &kp HOME &kp C_MUTE   &kp PG_UP &kp PG_DN &trans &trans &trans &trans
@@ -65,11 +65,16 @@
         &none &none &none &none &none   &none &none &none &none &bl BL_TOG &rgb_ug RGB_TOG   &bl BL_INC &bl BL_DEC &none &none &none
       >;
     };
-    extra1 { 
-      display-name = "Red";    
-      status = "reserved";
+    extra1 {
+      display-name = "Numpad";
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &tog 4       &trans &trans &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans
+        &trans &trans &trans &trans &trans &trans &trans       &trans &trans &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &trans
+        &tog 4 &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans   &trans &trans &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS &trans
+        &trans &trans &trans &trans &trans &trans   &trans &trans   &trans &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &trans
+        &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &kp KP_N0   &trans &trans &kp KP_DOT &trans &trans
+      >;
     };
-
     extra2 { 
       display-name = "Purple";    
       status = "reserved";
